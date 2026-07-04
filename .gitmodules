@@ -1,0 +1,3 @@
+[submodule "cross-stitch-pattern-generator"]
+	path = cross-stitch-pattern-generator
+	url = https://github.com/korphos/cross-stitch-pattern-generator.git

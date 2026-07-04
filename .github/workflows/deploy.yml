@@ -1,0 +1,64 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      # Always publish the latest commit on each submodule's default
+      # branch, rather than whatever SHA happens to be pinned in this
+      # repo's index - this workflow is the "publish now" button, so a
+      # manual run should never deploy stale content.
+      - name: Pull latest submodule commits
+        run: git submodule update --remote --recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: cross-stitch-pattern-generator/package-lock.json
+
+      - name: Build cross-stitch-pattern-generator
+        working-directory: cross-stitch-pattern-generator
+        run: |
+          npm ci
+          npm run build
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          shopt -s extglob
+          cp -r !(cross-stitch-pattern-generator|_site|.git|.github) _site/ 2>/dev/null || true
+          mkdir -p _site/cross-stitch-pattern-generator
+          cp -r cross-stitch-pattern-generator/dist/. _site/cross-stitch-pattern-generator/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
