@@ -15,7 +15,7 @@ useSeoMeta({
   ogTitle: () => t('seo.title'),
   ogDescription: () => t('seo.description'),
   ogType: 'website',
-  ogImage: 'https://korphos.github.io/images/oneroom.webp',
+  ogImage: 'https://korphos.github.io/images/cross-stitch-app.webp',
   twitterCard: 'summary_large_image',
 })
 
