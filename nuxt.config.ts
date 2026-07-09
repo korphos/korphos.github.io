@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         {
           key: 'theme-init',
           innerHTML:
-            "(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark')}}catch(e){}})();",
+            "(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d){document.documentElement.classList.add('dark')}}catch(e){}})();",
           tagPosition: 'head',
         },
       ],
