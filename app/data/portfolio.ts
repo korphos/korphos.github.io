@@ -288,7 +288,7 @@ const fr: PortfolioContent = {
       {
         id: 'robotic-arm',
         title: 'Bras robotique mobile — Vision et IA',
-        org: 'Polytechnique Montréal — Projet académique',
+        org: 'École des Mines de Douai — Projet académique',
         period: '2015',
         description:
           "Projet d'un mois combinant robotique, vision par ordinateur et IA : un robot capable de détecter, suivre et saisir des objets de façon autonome.",
@@ -576,7 +576,7 @@ const en: PortfolioContent = {
       {
         id: 'robotic-arm',
         title: 'Mobile Robot Manipulator — Vision & AI',
-        org: 'Polytechnique Montreal — Academic project',
+        org: 'Ecole des Mines de Douai — Academic project',
         period: '2015',
         description:
           'A one-month project combining robotics, computer vision, and AI: a robot able to detect, follow, and pick up objects autonomously.',
