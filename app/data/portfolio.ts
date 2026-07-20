@@ -33,6 +33,7 @@ export interface Project {
   code?: CodeSnippet
   links?: ProjectLink[]
   highlight?: boolean
+  wide?: boolean
 }
 
 export interface ExperienceEntry {
@@ -151,6 +152,7 @@ const fr: PortfolioContent = {
           width: 1280,
           height: 720,
         },
+        wide: true,
       },
       {
         id: 'cross-stitch',
@@ -197,6 +199,7 @@ const fr: PortfolioContent = {
             href: 'https://eye-in.com/fr/affichage-numerique/logiciel-multimedia/eye-infinite-player',
           },
         ],
+        wide: true,
       },
       {
         id: 'infra-migration',
@@ -253,6 +256,46 @@ const fr: PortfolioContent = {
           'Stack complète SPF, DKIM, DMARC pour garantir la délivrabilité',
         ],
         tags: ['Node.js', 'SMTP', 'DNS', 'Linux'],
+      },
+      {
+        id: 'guest-wifi',
+        title: 'Portails Wi-Fi invité & gestion de flotte de routeurs',
+        org: 'Eye-In Media',
+        description:
+          "Pages de connexion (captive portal) développées en Nuxt, optimisées pour rester rapides même sur des réseaux Wi-Fi de qualité médiocre. Configuration et supervision d'une flotte de routeurs multi-marques.",
+        bullets: [
+          'Captive portal en Nuxt, pensé pour la performance sur des connexions Wi-Fi limitées',
+          'Intégration des API de plusieurs marques de routeurs : Mikrotik, Cisco, Meraki, Peplink',
+          'Mises à jour automatiques de la flotte par scheduled pulling',
+        ],
+        tags: ['Nuxt', 'Captive Portal', 'Mikrotik', 'Cisco', 'Meraki', 'Peplink'],
+        image: {
+          src: '/images/wifi-captive-portal.webp',
+          alt: 'Écran de connexion Wi-Fi invité (captive portal) avec options de connexion par email ou réseaux sociaux',
+          width: 600,
+          height: 1298,
+        },
+        links: [{ label: 'Voir la solution Wi-Fi', href: 'https://eye-in.com/wifi' }],
+      },
+      {
+        id: 'foodforce',
+        title: 'FoodForce — Plateforme de gestion de menus',
+        org: 'Eye-In Media',
+        description:
+          "Plateforme de gestion de menus, POS et commandes pour restaurants. Développement d'une bonne partie du backend, contribution significative au frontend, et intégration des paiements et du POS avec Square et PayPal.",
+        bullets: [
+          'Backend de la gestion des menus, prix et items',
+          'Contribution au frontend, en binôme avec un collègue développeur qui gérait le design',
+          'Intégration POS et paiements avec Square et PayPal',
+        ],
+        tags: ['Node.js', 'Vue.js', 'Square', 'PayPal', 'POS'],
+        image: {
+          src: '/images/foodforce-menu-manager.webp',
+          alt: "Interface d'administration FoodForce pour la gestion des items de menu, prix et allergènes",
+          width: 1000,
+          height: 799,
+        },
+        links: [{ label: 'Voir la solution Restaurants', href: 'https://eye-in.com/solutions/restaurants' }],
       },
     ],
   },
@@ -445,6 +488,7 @@ const en: PortfolioContent = {
           width: 1280,
           height: 720,
         },
+        wide: true,
       },
       {
         id: 'cross-stitch',
@@ -491,6 +535,7 @@ const en: PortfolioContent = {
             href: 'https://eye-in.com/fr/affichage-numerique/logiciel-multimedia/eye-infinite-player',
           },
         ],
+        wide: true,
       },
       {
         id: 'infra-migration',
@@ -547,6 +592,46 @@ const en: PortfolioContent = {
           'Full SPF, DKIM, DMARC stack to ensure deliverability',
         ],
         tags: ['Node.js', 'SMTP', 'DNS', 'Linux'],
+      },
+      {
+        id: 'guest-wifi',
+        title: 'Guest Wi-Fi Portals & Router Fleet Management',
+        org: 'Eye-In Media',
+        description:
+          'Captive portal login pages built in Nuxt, optimized to stay fast even on mediocre Wi-Fi connections. Configured and monitored a multi-vendor router fleet.',
+        bullets: [
+          'Captive portal built in Nuxt, engineered for performance on constrained Wi-Fi connections',
+          'Integrated APIs from multiple router vendors: Mikrotik, Cisco, Meraki, Peplink',
+          'Automated fleet updates via scheduled pulling',
+        ],
+        tags: ['Nuxt', 'Captive Portal', 'Mikrotik', 'Cisco', 'Meraki', 'Peplink'],
+        image: {
+          src: '/images/wifi-captive-portal.webp',
+          alt: 'Guest Wi-Fi captive portal login screen with email and social sign-in options',
+          width: 600,
+          height: 1298,
+        },
+        links: [{ label: 'View the Wi-Fi solution', href: 'https://eye-in.com/wifi' }],
+      },
+      {
+        id: 'foodforce',
+        title: 'FoodForce — Menu Management Platform',
+        org: 'Eye-In Media',
+        description:
+          'A menu, POS, and ordering management platform for restaurants. Built a large part of the backend, contributed significantly to the front-end, and integrated POS and payments with Square and PayPal.',
+        bullets: [
+          'Backend for menu, pricing, and item management',
+          'Front-end contributions, paired with a developer colleague who handled the design',
+          'POS and payment integration with Square and PayPal',
+        ],
+        tags: ['Node.js', 'Vue.js', 'Square', 'PayPal', 'POS'],
+        image: {
+          src: '/images/foodforce-menu-manager.webp',
+          alt: 'FoodForce admin interface for managing menu items, pricing, and allergens',
+          width: 1000,
+          height: 799,
+        },
+        links: [{ label: 'View the Restaurants solution', href: 'https://eye-in.com/solutions/restaurants' }],
       },
     ],
   },

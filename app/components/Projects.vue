@@ -13,7 +13,7 @@ const content = usePortfolioContent()
         :key="project.id"
         :project="project"
         :eager-image="i === 0"
-        :class="project.highlight || project.image ? 'sm:col-span-2' : ''"
+        :class="project.highlight || project.wide ? 'sm:col-span-2' : ''"
       />
     </div>
 
