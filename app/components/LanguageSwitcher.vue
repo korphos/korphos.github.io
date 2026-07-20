@@ -3,17 +3,17 @@ const { locale, locales, setLocale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const available = computed(() =>
-  (locales.value as Array<{ code: string; name?: string }>).filter((l) => l.code !== locale.value),
+  (locales.value as Array<{ code: 'fr' | 'en'; name?: string }>).filter((l) => l.code !== locale.value),
 )
 
-async function change(code: string) {
+async function change(code: 'fr' | 'en') {
   const path = switchLocalePath(code)
   // Strip any URL hash (e.g. #contact from clicking a nav link) so the new
-  // locale's page doesn't auto-scroll to that anchor.
+  // locale's page doesn't jump to that anchor.
   const cleanPath = path?.split('#')[0]
 
   if (cleanPath) await navigateTo(cleanPath)
-  else await setLocale(code as 'fr' | 'en')
+  else await setLocale(code)
 }
 </script>
 
