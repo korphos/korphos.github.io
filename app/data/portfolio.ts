@@ -172,6 +172,33 @@ const fr: PortfolioContent = {
         highlight: true,
       },
       {
+        id: 'digital-signage',
+        title: "Lecteur d'affichage numérique multiplateforme",
+        org: 'Eye-In Media',
+        description:
+          "Un lecteur d'affichage numérique conçu pour tourner sur pratiquement n'importe quel écran : une seule codebase, pensée pour des mises à jour fréquentes du front-end sans jamais perdre le contrôle à distance sur le parc de machines.",
+        bullets: [
+          "Coquille Electron embarquant une PWA pour le front-end : les mises à jour d'interface se déploient sans nouvelle build Electron ; packaging et auto-updates gérés avec electron-builder",
+          'Connexion temps réel via Socket.io pour synchroniser contenu et planification sur tout le parc',
+          "Une seule codebase pour Windows, Ubuntu (Electron), Android et Amazon Fire TV Stick (Capacitor), Samsung Tizen et le web (PWA), avec du code spécifique à chaque OS pour les réglages bas niveau (ex. gestion de l'hibernation)",
+          "Prise de contrôle à distance façon TeamViewer développée en Rust (souris/clavier), avec le flux vidéo transmis en WebRTC vers l'application de monitoring",
+        ],
+        tags: ['Electron', 'PWA', 'Rust', 'WebRTC', 'Socket.io', 'Capacitor', 'Tizen'],
+        image: {
+          src: '/images/eye-infinite-player.webp',
+          alt: 'Logo du lecteur multimédia Eye-Infinite Player',
+          width: 240,
+          height: 264,
+          fit: 'contain',
+        },
+        links: [
+          {
+            label: 'Voir le produit',
+            href: 'https://eye-in.com/fr/affichage-numerique/logiciel-multimedia/eye-infinite-player',
+          },
+        ],
+      },
+      {
         id: 'infra-migration',
         title: 'Migration infrastructure Azure / Docker / Kubernetes',
         org: 'Eye-In Media',
@@ -248,27 +275,6 @@ const fr: PortfolioContent = {
 <input placeholder="Text to translate" v-t:placeholder>`,
         },
         links: [{ label: 'Voir sur npm', href: 'https://www.npmjs.com/package/vue-eyein-translation' }],
-      },
-      {
-        id: 'digital-signage',
-        title: "Lecteur d'affichage numérique multiplateforme",
-        org: 'Eye-In Media',
-        description:
-          "Un lecteur d'affichage numérique fonctionnant sur Windows, Ubuntu, Linux Mint, Android et Samsung Tizen, avec lecture hors-ligne et synchronisation en arrière-plan.",
-        tags: ['Electron', 'Vue.js', 'PWA', 'Android', 'Tizen'],
-        image: {
-          src: '/images/eye-infinite-player.webp',
-          alt: 'Logo du lecteur multimédia Eye-Infinite Player',
-          width: 240,
-          height: 264,
-          fit: 'contain',
-        },
-        links: [
-          {
-            label: 'Voir le produit',
-            href: 'https://eye-in.com/fr/affichage-numerique/logiciel-multimedia/eye-infinite-player',
-          },
-        ],
       },
       {
         id: 'chart-creator',
@@ -460,6 +466,33 @@ const en: PortfolioContent = {
         highlight: true,
       },
       {
+        id: 'digital-signage',
+        title: 'Cross-Platform Digital Signage Player',
+        org: 'Eye-In Media',
+        description:
+          'A digital signage player built to run on almost any screen: a single codebase, architected for frequent front-end updates without ever losing remote control over the device fleet.',
+        bullets: [
+          'Electron shell embedding a PWA front-end: UI updates ship without a new Electron build; packaging and auto-updates handled with electron-builder',
+          'Real-time content and schedule sync across the whole fleet over Socket.io',
+          'One codebase for Windows, Ubuntu (Electron), Android and Amazon Fire TV Stick (Capacitor), Samsung Tizen, and the web (PWA), with OS-specific native code for low-level settings (e.g. hibernation control)',
+          'Built a TeamViewer-like remote control tool in Rust (mouse/keyboard input), streaming the display back to our monitoring app over WebRTC',
+        ],
+        tags: ['Electron', 'PWA', 'Rust', 'WebRTC', 'Socket.io', 'Capacitor', 'Tizen'],
+        image: {
+          src: '/images/eye-infinite-player.webp',
+          alt: 'Eye-Infinite Player media player logo',
+          width: 240,
+          height: 264,
+          fit: 'contain',
+        },
+        links: [
+          {
+            label: 'View product',
+            href: 'https://eye-in.com/fr/affichage-numerique/logiciel-multimedia/eye-infinite-player',
+          },
+        ],
+      },
+      {
         id: 'infra-migration',
         title: 'Azure / Docker / Kubernetes Infrastructure Migration',
         org: 'Eye-In Media',
@@ -536,27 +569,6 @@ const en: PortfolioContent = {
 <input placeholder="Text to translate" v-t:placeholder>`,
         },
         links: [{ label: 'View on npm', href: 'https://www.npmjs.com/package/vue-eyein-translation' }],
-      },
-      {
-        id: 'digital-signage',
-        title: 'Cross-Platform Digital Signage Player',
-        org: 'Eye-In Media',
-        description:
-          'A digital signage player running on Windows, Ubuntu, Linux Mint, Android, and Samsung Tizen, with offline playback and background sync.',
-        tags: ['Electron', 'Vue.js', 'PWA', 'Android', 'Tizen'],
-        image: {
-          src: '/images/eye-infinite-player.webp',
-          alt: 'Eye-Infinite Player media player logo',
-          width: 240,
-          height: 264,
-          fit: 'contain',
-        },
-        links: [
-          {
-            label: 'View product',
-            href: 'https://eye-in.com/fr/affichage-numerique/logiciel-multimedia/eye-infinite-player',
-          },
-        ],
       },
       {
         id: 'chart-creator',
